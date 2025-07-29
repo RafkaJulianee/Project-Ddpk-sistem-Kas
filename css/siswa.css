@@ -1,0 +1,160 @@
+/* Gaya umum halaman */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fff);
+      min-height: 100vh;
+      padding: 30px 10px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 960px;
+      background: #ffffff;
+      padding: 35px 45px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Judul halaman */
+    h2 {
+      font-weight: 600;
+      margin-bottom: 25px;
+      color: #1c2b36;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Tombol kembali */
+    .btn-back {
+      margin-bottom: 20px;
+      background-color: #17a2b8;
+      border: none;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 8px;
+    }
+
+    .btn-back:hover {
+      background-color: #138496;
+    }
+
+    /* Tombol reset */
+    #resetKas {
+      font-weight: 600;
+      background-color: #dc3545;
+      border: none;
+      letter-spacing: 0.05em;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #fff;
+      margin-bottom: 15px;
+      float: right;
+    }
+
+    #resetKas:hover {
+      background-color: #b02a37;
+    }
+
+    /* Input pencarian */
+    #searchInput {
+      padding: 10px 15px;
+      border: 2px solid #17a2b8;
+      border-radius: 8px;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    /* Tabel data siswa */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    thead {
+      background: #17a2b8;
+      color: #fff;
+    }
+
+    thead th {
+      padding: 14px;
+      text-align: center;
+      font-size: 15.5px;
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    tbody tr:hover {
+      background-color: #e0f7fa;
+    }
+
+    tbody td {
+      padding: 14px;
+      text-align: center;
+      font-size: 14.5px;
+    }
+
+    .text-start {
+      text-align: left !important;
+    }
+
+    .status-lunas {
+      color: #28a745;
+      font-weight: 700;
+    }
+
+    .status-belum {
+      color: #dc3545;
+      font-weight: 700;
+    }
+
+    #totalKas {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: right;
+      margin-top: 20px;
+      color: #007b5e;
+    }
+
+    /* Tampilan mobile */
+    @media screen and (max-width: 576px) {
+      thead {
+        display: none;
+      }
+
+      table,
+      tbody,
+      tr,
+      td {
+        display: block;
+        width: 100%;
+      }
+
+      tr {
+        margin-bottom: 15px;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      td {
+        text-align: left;
+        padding: 6px 10px;
+        font-size: 15px;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 4px;
+        color: #666;
+      }
+    }

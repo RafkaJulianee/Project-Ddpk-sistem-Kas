@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/rpl.png" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <style>
+
+  </style>
+  </head>
+
+  <body>
+    <nav class="sidebar">
+      <div class="sidebar-logo text-center py-3">
+        <img id="dashboardFoto" src="img/rpl.png" alt="Foto Profil" class="rounded-circle sidebar-img" />
+      </div>
+
+      <a href="index.html" class="active"><i class="bi bi-house-door"></i> Dashboard</a>
+      <a href="profil.html"><i class="bi bi-person-circle"></i> Profil</a>
+      <a href="datasiswa.html"><i class="bi bi-people"></i> Data Siswa</a>
+      <a href="inputkas.html"><i class="bi bi-cash-coin"></i>Bayar Kas</a>
+      <a href="pengeluarankas.html"><i class="bi bi-receipt"></i> Pengeluaran</a>
+      <div class="d-flex justify-content-end p-3 gap-2">
+        <button id="resetSemua" class="btn btn-danger">Reset Data</button>
+        <a href="login.html" class="btn btn-secondary">Logout</a>
+      </div>
+    </nav>
+
+
+
+    <main class="content">
+      <h2>Dashboard</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-primary shadow">
+            <div class="card-content">
+              <div>
+                <h4>Siswa</h4>
+                <p>36 Orang</p>
+              </div>
+              <i class="bi bi-person-lines-fill icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-success shadow">
+            <div class="card-content">
+              <div>
+                <h4>User</h4>
+                <p>1</p>
+              </div>
+              <i class="bi bi-person-circle icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-warning shadow">
+            <div class="card-content">
+              <div>
+                <h4>Bendahara</h4>
+                <p>2 Orang</p>
+              </div>
+              <i class="bi bi-people-fill icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-danger shadow">
+            <div class="card-content">
+              <div>
+                <h4>Sisa Uang Kas</h4>
+                <p id="sisaKas">Rp 0</p>
+              </div>
+              <i class="bi bi-wallet2 icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <a href="kalkulator.html" class="text-decoration-none">
+            <div class="card shadow-sm border-0 text-center p-4 bg-light h-100">
+              <i data-lucide="calculator" class="mb-3" style="width: 40px; height: 40px; color: purple;"></i>
+              <h5 class="card-title text-dark">Kalkulator Kas</h5>
+              <p class="text-muted mb-0">Hitung jumlah iuran kas dengan mudah.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="stats-card">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h5>Total Kas Minggu Ini</h5>
+            <h3 id="kasMingguan">Rp 0</h3>
+            <span id="statistikKas" class="text-success">+0%</span>
+          </div>
+          <div><i class="bi bi-cash-coin"></i></div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      lucide.createIcons();
+    </script>
+
+  </body>
+
+</html>

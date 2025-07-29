@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil</title>
+  <link rel="stylesheet" href="css/profil.css">
+  <link rel="shortcut icon" href="rpl.png" type="image/x-icon" />
+
+
+</head>
+
+<body>
+  <div class="profile-container">
+    <!-- Foto profil default -->
+    <div class="profile-pic" id="profilePic">
+      <span>&#128100;</span> <!-- Ikon default profil -->
+    </div>
+
+    <!-- Tombol unggah foto -->
+    <label for="foto" class="upload-btn">Ubah Foto Profil</label>
+    <input type="file" id="foto" accept="image/*" />
+
+    <!-- Form input nama -->
+    <div class="input-group">
+      <label for="nama">User Name</label>
+      <input type="text" id="nama" placeholder="UserName" />
+    </div>
+
+    <!-- Form input telepon -->
+    <div class="input-group">
+      <label for="email">No.Telepon</label>
+      <input type="text" id="telepon" placeholder="08xxxxxx" />
+    </div>
+
+    <!-- Tombol simpan profil -->
+    <button class="btn-primary" onclick="simpanProfil()">Simpan Profil</button>
+
+    <!-- Tombol kembali ke dashboard -->
+    <button class="btn-secondary" onclick="window.location.href='index.html'">Kembali ke Dashboard</button>
+  </div>
+
+  <!-- Script untuk interaksi -->
+  <script>
+    const namaInput = document.getElementById("nama");
+    const teleponInput = document.getElementById("telepon");
+    const fotoInput = document.getElementById("foto");
+    const profilePic = document.getElementById("profilePic");
+
+    // Ambil data nama dan telepon dari localStorage jika tersedia
+    namaInput.value = localStorage.getItem("profilNama") || "";
+    teleponInput.value = localStorage.getItem("profilTelepon") || "";
+
+    // Ambil dan tampilkan foto profil dari localStorage
+    const fotoData = localStorage.getItem("profilFoto");
+    if (fotoData) {
+      profilePic.innerHTML = `<img src="${fotoData}" alt="Foto Profil" />`;
+    }
+
+    // Saat pengguna memilih foto, tampilkan preview dan simpan ke localStorage
+    fotoInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          profilePic.innerHTML = `<img src="${e.target.result}" alt="Foto Profil" />`;
+          localStorage.setItem("profilFoto", e.target.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Fungsi menyimpan data profil ke localStorage
+    function simpanProfil() {
+      localStorage.setItem("profilNama", namaInput.value);
+      localStorage.setItem("profilTelepon", teleponInput.value);
+      alert("Profil berhasil disimpan!");
+    }
+  </script>
+</body>
+
+</html>

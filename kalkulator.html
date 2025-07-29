@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Kas</title>
+  <link rel="stylesheet" href="css/kalkulator.css">
+   <link rel="shortcut icon" href="img/rpl.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Kalkulator Kas Kecil</h2>
+
+    <div class="input-group">
+      <label for="jumlahSiswa">Jumlah Siswa</label>
+      <input type="number" id="jumlahSiswa" value="36" />
+    </div>
+
+    <div class="input-group">
+      <label for="kasPerSiswa">Kas per Siswa (Rp)</label>
+      <input type="number" id="kasPerSiswa" placeholder="2000" />
+    </div>
+
+    <button onclick="hitungKas()">Hitung Total Kas</button>
+
+    <div class="result" id="hasilKas">Rp 0</div>
+
+    <a href="index.html" class="back-link">Kembali ke Dashboard</a>
+  </div>
+  <script src="js/kalkulator.js"></script>
+
+  
+</body>
+
+</html>

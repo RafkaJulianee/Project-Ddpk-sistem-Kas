@@ -1,0 +1,96 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      background: #667eea;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 60px 50px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+      max-width: 700px;
+      width: 100%;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+      color: #333;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+    label {
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #555;
+      display: block;
+      margin-bottom: 12px;
+    }
+    select.form-select, input.form-control {
+      border-radius: 14px;
+      border: 2px solid #ccc;
+      padding: 18px 20px;
+      font-size: 1.25rem;
+      transition: border-color 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    select.form-select:focus, input.form-control:focus {
+      border-color: #764ba2;
+      box-shadow: 0 0 10px rgba(118, 75, 162, 0.6);
+      outline: none;
+    }
+    button.btn-primary {
+      background: #764ba2;
+      border: none;
+      font-weight: 700;
+      padding: 18px 0;
+      width: 100%;
+      font-size: 1.4rem;
+      border-radius: 16px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 30px;
+      box-shadow: 0 8px 20px rgba(118, 75, 162, 0.5);
+      cursor: pointer;
+    }
+    button.btn-primary:hover {
+      background: #5a367a;
+      box-shadow: 0 10px 30px rgba(90, 54, 122, 0.7);
+    }
+    #notifikasi {
+      margin-top: 25px;
+      font-weight: 700;
+      text-align: center;
+      color: #2f7a2f;
+      border-radius: 12px;
+      padding: 15px 20px;
+      background-color: #e6f4ea;
+      box-shadow: 0 5px 15px rgba(47, 122, 47, 0.35);
+      font-size: 1.3rem;
+    }
+    #notifikasi.d-none {
+      display: none;
+    }
+    a.btn-secondary {
+      margin-top: 30px;
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      border-radius: 16px;
+      background: #444;
+      border: none;
+      padding: 16px 0;
+      font-size: 1.3rem;
+      color: white;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a.btn-secondary:hover {
+      background: #222;
+      text-decoration: none;
+    }

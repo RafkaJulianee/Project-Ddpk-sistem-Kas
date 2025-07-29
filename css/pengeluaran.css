@@ -1,0 +1,152 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      padding: 30px 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 700px;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+      margin: auto;
+    }
+
+    h2,
+    h3 {
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #2c3e50;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #555;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #4a90e2;
+      outline: none;
+    }
+
+    button {
+      background-color: #4a90e2;
+      border: none;
+      padding: 12px 22px;
+      color: white;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+    }
+
+    button:hover {
+      background-color: #357abd;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate !important;
+      border-spacing: 0 10px;
+      margin-top: 30px;
+    }
+
+    thead th {
+      text-align: left;
+      font-weight: 700;
+      padding: 10px 6px;
+      border-bottom: 2px solid #4a90e2;
+      color: #2c3e50;
+    }
+
+    tbody tr {
+      background: #f9fafc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
+      transition: transform 0.15s ease;
+    }
+
+    tbody tr:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
+    }
+
+    tbody td {
+      padding: 12px 8px;
+      vertical-align: middle;
+      font-size: 15px;
+      color: #444;
+    }
+
+    .text-right {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .btn-delete {
+      background-color: #dc3545;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-delete:hover {
+      background-color: #b02a37;
+    }
+
+    .history-section {
+      margin-top: 50px;
+    }
+
+    .history-list {
+      max-height: 250px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 12px 18px;
+      background: #fafafa;
+    }
+
+    .history-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .history-item:last-child {
+      border-bottom: none;
+    }
+
+    .history-item span {
+      min-width: 80px;
+      text-align: right;
+      font-weight: 600;
+    }
